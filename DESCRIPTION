@@ -1,0 +1,9 @@
+Package: GSAA
+Title: Gene Set Association Analysis
+Version: 0.8
+Authors@R: person("Christoph", "Rau", email = "chrau@ucla.edu", role = c("aut", "cre"))
+Description: GSAA finds associations between weighted gene sets and GO Terms by using a GWAS-like approach of associating the weights (a 'phenotype') of individual genes ('samples') to a GO Term (a 'SNP').  The Analysis is capable of recovering significantly improved associations between gene groups and GO Terms, especially for smaller datasets which can be expanded due to weighting.
+Depends: R (>= 3.3.0),GO.db,fdrtool,biomaRt
+License: GNU GPL 3.0
+Encoding: UTF-8
+LazyData: true
