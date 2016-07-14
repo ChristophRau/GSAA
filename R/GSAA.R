@@ -3,23 +3,23 @@
 # This function calculates the associations, determines FDRs and returns the final results
 # INPUTS:
 #     input:  Same as above.
-#     GOInfo: incidence matrix from above
+#     GoInfo: incidence matrix from above
 #     qval_threshold:  FDR threshold.  Will take either 0-1 or 0-100 values and adjust accordingly
 # OUTPUTS:  table of all significant GO Associations.  It will also generate a file ("GSAA_All_Pvalues.csv") with all pvalues.
 #
 ###################
 
-GSAA <- function(input, GOInfo,qval_threshold=.05){
+GSAA <- function(input, GoInfo,qval_threshold=.05){
   outfile<-file("GSAA_All_Pvalues.csv","w")
   cat("Module,GO Term,Pval",file=outfile,sep="\n")
-  print(paste0("There Are ",nrow(indata)," Groupings..."))
-  for(i in 1:nrow(indata)){
+  print(paste0("There Are ",nrow(input)," Groupings..."))
+  for(i in 1:nrow(input)){
     print(paste0("Calculating Pvalues For Group ",i))
     bar=txtProgressBar(style=3)
     for(j in 1:nrow(GoInfo)){
       setTxtProgressBar(bar,j/nrow(GoInfo))
-      pval=wilcox.test(as.numeric(indata[i,])~as.numeric(GoInfo[j,]))$p.value #calculates the wilcoxan rank sum test score for the pvalue.
-      outrow=c(rownames(indata)[i],rownames(GoInfo)[j],pval)
+      pval=wilcox.test(as.numeric(input[i,])~as.numeric(GoInfo[j,]))$p.value #calculates the wilcoxan rank sum test score for the pvalue.
+      outrow=c(rownames(input)[i],rownames(GoInfo)[j],pval)
       outrow=paste(outrow,collapse=",")
       cat(outrow,file=outfile,sep="\n")
     }
