@@ -4,3 +4,10 @@ Pre-published version.  Download the .zip file to install.
 
 Requires fdrtool, GO.db and biomaRt.
 
+4 functions:
+RUN_GSAA:  Main function.  See man page for details
+GSAA:  Runs GSAA once you have an incidence table
+calculateIncidenceTable:  Creates incidence table
+1 internal function.
+
+Windows Users:  Use GSAA0.8.zip instead of GSAA.zip to install.
