@@ -17,7 +17,7 @@ calculateIncidenceTable <- function(input, ensembl_dataset="mmusculus_gene_ensem
   ensembl = useDataset(ensembl_dataset,mart=ensembl)
 
   #identifies which Ids are present in your data, and matches them to the dataset to get a set of mappings from ID to GO Term
-  IDs=colnames(indata)
+  IDs=colnames(input)
   goids = getBM(attributes=c(mart,'go_id'), filters=mart, values=IDs, mart=ensembl)
 
   print("Filtering GO TERM List...")
