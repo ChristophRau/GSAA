@@ -11,7 +11,7 @@
 }
 
 \value{
-  \item{Sig_Results} {Significant GSAA results}
+  \item{Sig_Results}{Significant GSAA results}
 }
 
 \usage{
