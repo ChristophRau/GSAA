@@ -12,9 +12,9 @@
 #
 ###################
 
-RUN_GSAA <-function(input,ensembl_dataset="mmusculus_gene_ensembl",mart="illumina_mouseref_8_v2",GO_Member_Threshold=10,qval_threshold=.05){
-  GOInfo=calculateIncidenceTable(input, ensembl_dataset="mmusculus_gene_ensembl",mart="illumina_mouseref_8_v2",GO_Member_Threshold=10)
-  SigResult=GSAA(input, GOInfo,qval_threshold=.05)
+RUN_GSAA <-function(input,ensembl_dataset="mmusculus_gene_ensembl",mart="illumina_mouseref_8",GO_Member_Threshold=10,qval_threshold=.05){
+  GOInfo=calculateIncidenceTable(input, ensembl_dataset=ensembl_dataset,mart=mart,GO_Member_Threshold=GO_Member_Threshold)
+  SigResult=GSAA(input, GOInfo,qval_threshold=qval_threshold)
   newList = list("Incidence_Table"=GOInfo, "Sig_Results"=SigResult)
   return(newList)
 
