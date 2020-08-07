@@ -1,6 +1,6 @@
 Gene Set Association Analysis 0.8
 
-Pre-published version.  Download the .zip file to install.
+Pre-published version.  Use devtools::install_github("ChristophRau/GSAA")  to install.
 
 Requires fdrtool, GO.db and biomaRt.
 
@@ -10,4 +10,4 @@ GSAA:  Runs GSAA once you have an incidence table
 calculateIncidenceTable:  Creates incidence table
 1 internal function.
 
-Windows Users:  Use GSAA0.8.zip instead of GSAA.zip to install.
+
