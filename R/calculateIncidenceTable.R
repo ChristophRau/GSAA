@@ -13,7 +13,7 @@
 calculateIncidenceTable <- function(input, ensembl_dataset="mmusculus_gene_ensembl",mart="illumina_mouseref_8_v2",GO_Member_Threshold=10) {
 
   print("Creating Master GO TERM List...")
-  ensembl = useMart("ENSEMBL_MART_ENSEMBL", host = "uswest.ensembl.org")
+  ensembl = useMart("ENSEMBL_MART_ENSEMBL", host = "https://uswest.ensembl.org")
   ensembl = useDataset(ensembl_dataset,mart=ensembl)
 
   #identifies which Ids are present in your data, and matches them to the dataset to get a set of mappings from ID to GO Term
