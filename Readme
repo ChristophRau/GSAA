@@ -1,4 +1,4 @@
-Gene Set Association Analysis 0.8
+Gene Set Association Analysis 0.81
 
 Pre-published version.  Use devtools::install_github("ChristophRau/GSAA")  to install.
 
@@ -10,4 +10,5 @@ GSAA:  Runs GSAA once you have an incidence table
 calculateIncidenceTable:  Creates incidence table
 1 internal function.
 
-
+Install w/ devtools:
+install_github("ChristophRau/GSAA")
